@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Truco o Trato - Comunidad Tom</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#17051f;color:white;font-family:Arial,sans-serif;text-align:center}
+main{max-width:900px;margin:auto}
+.escena{position:relative}
+.portada{display:block;width:100%}
+.opcion{position:absolute;width:24%;height:24%;border-radius:50%;transform:translate(-50%,-50%);cursor:pointer}
+.opcion:focus-visible{outline:4px solid yellow}
+.resultado{display:none;position:fixed;inset:0;z-index:10;overflow:auto;background:radial-gradient(circle at center,#61216f,#17051f 75%);padding:18px}
+.resultado:target{display:block}
+.panel{max-width:550px;margin:auto;padding:20px;border:3px solid #ffb52e;border-radius:24px;background:#250e35;box-shadow:0 0 35px #a43cff}
+h1{color:#ffb52e;font-size:clamp(28px,6vw,48px);margin:12px}
+h2{font-size:clamp(16px,4vw,25px)}
+.tom{width:min(80%,300px);max-height:40vh;object-fit:contain;animation:entrada .8s ease}
+.premio{font-size:clamp(36px,9vw,64px);font-weight:900;color:#ffda45;text-shadow:0 0 20px #ff7300}
+.volver{display:inline-block;background:#ff8c1a;color:#17051f;text-decoration:none;padding:14px 24px;border-radius:30px;font-weight:bold;margin:16px}
+@keyframes entrada{from{opacity:0;transform:scale(.5) rotate(-8deg)}to{opacity:1;transform:scale(1)}}
+</style>
+</head>
+<body>
+<main id="inicio">
+<div class="escena">
+<img class="portada" src="img/portada.png" alt="Elegí el disfraz de Tom">
+<a class="opcion" style="left:21%;top:23%" href="#vampiro" aria-label="Vampiro"></a>
+<a class="opcion" style="left:18%;top:47%" href="#fantasma" aria-label="Fantasma"></a>
+<a class="opcion" style="left:20%;top:73%" href="#momia" aria-label="Momia"></a>
+<a class="opcion" style="left:81%;top:23%" href="#diablo" aria-label="Diablo"></a>
+<a class="opcion" style="left:83%;top:47%" href="#brujo" aria-label="Brujo"></a>
+<a class="opcion" style="left:81%;top:73%" href="#esqueleto" aria-label="Esqueleto"></a>
+</div>
+<p>🎃 Tocá un disfraz y descubrí tu premio 🎃</p>
+</main>
+<section class="resultado" id="vampiro"><div class="panel"><p>🎃 COMUNIDAD TOM 🎃</p><h1>¡TRUCO O TRATO!</h1><h2>¡TOM SE DISFRAZÓ DE VAMPIRO!</h2><img class="tom" src="img/vampiro.png" alt="Tom VAMPIRO"><p>✨ ¡FELICIDADES! GANASTE ✨</p><div class="premio">30%</div><p>EN TU PRÓXIMA CARGA</p><a class="volver" href="#inicio">VOLVER AL JUEGO</a></div></section>
+<section class="resultado" id="fantasma"><div class="panel"><p>🎃 COMUNIDAD TOM 🎃</p><h1>¡TRUCO O TRATO!</h1><h2>¡TOM SE DISFRAZÓ DE FANTASMA!</h2><img class="tom" src="img/fantasma.png" alt="Tom FANTASMA"><p>✨ ¡FELICIDADES! GANASTE ✨</p><div class="premio">20%</div><p>EN TU PRÓXIMA CARGA</p><a class="volver" href="#inicio">VOLVER AL JUEGO</a></div></section>
+<section class="resultado" id="momia"><div class="panel"><p>🎃 COMUNIDAD TOM 🎃</p><h1>¡TRUCO O TRATO!</h1><h2>¡TOM SE DISFRAZÓ DE MOMIA!</h2><img class="tom" src="img/momia.png" alt="Tom MOMIA"><p>✨ ¡FELICIDADES! GANASTE ✨</p><div class="premio">15%</div><p>EN TU PRÓXIMA CARGA</p><a class="volver" href="#inicio">VOLVER AL JUEGO</a></div></section>
+<section class="resultado" id="diablo"><div class="panel"><p>🎃 COMUNIDAD TOM 🎃</p><h1>¡TRUCO O TRATO!</h1><h2>¡TOM SE DISFRAZÓ DE DIABLO!</h2><img class="tom" src="img/diablo.png" alt="Tom DIABLO"><p>✨ ¡FELICIDADES! GANASTE ✨</p><div class="premio">10%</div><p>EN TU PRÓXIMA CARGA</p><a class="volver" href="#inicio">VOLVER AL JUEGO</a></div></section>
+<section class="resultado" id="brujo"><div class="panel"><p>🎃 COMUNIDAD TOM 🎃</p><h1>¡TRUCO O TRATO!</h1><h2>¡TOM SE DISFRAZÓ DE BRUJO!</h2><img class="tom" src="img/brujo.png" alt="Tom BRUJO"><p>✨ ¡FELICIDADES! GANASTE ✨</p><div class="premio">1.000 FICHAS</div><p>EN TU PRÓXIMA CARGA</p><a class="volver" href="#inicio">VOLVER AL JUEGO</a></div></section>
+<section class="resultado" id="esqueleto"><div class="panel"><p>🎃 COMUNIDAD TOM 🎃</p><h1>¡TRUCO O TRATO!</h1><h2>¡TOM SE DISFRAZÓ DE ESQUELETO!</h2><img class="tom" src="img/esqueleto.png" alt="Tom ESQUELETO"><p>✨ ¡FELICIDADES! GANASTE ✨</p><div class="premio">500 FICHAS</div><p>EN TU PRÓXIMA CARGA</p><a class="volver" href="#inicio">VOLVER AL JUEGO</a></div></section>
+</body>
+</html>
